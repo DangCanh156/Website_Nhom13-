@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UITcinema</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Allerta+Stencil" />
+<style>
+    .split1{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+    .split2{
+        display: grid;
+        grid-template-columns: 80% 20%;
+    }
+    .split2 img#logo{
+        display: flex;
+        padding-top: 2%;
+        margin-left: 49%;
+        margin-right: 30%;
+        text-align: center;
+    }
+    .split3{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .split3 p{
+        font-family: calibri;
+        padding-left: 10%;
+        color: white;
+    }
+    .split3 a{
+        color:#ffffff;
+        display: inline-block;
+    }
+    .split3 img#lh{
+        display: block;
+        text-align: center;
+        box-shadow: 0 0 4px #f1f1f1;
+    }
+    .split3 a :hover img {
+        transform: scale(0.8);
+    }
+    hr.border{
+        border: 1.5px solid black;
+    }
+    div.center1{
+        display: block;
+        margin-left: 10%;
+        margin-right: auto;
+        margin-top:  10%;
+        margin-bottom: 10%;
+    }
+    .center2{
+        display: block;
+        margin-top:  10%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .center3 {
+        display: flex;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .dropup {
+        position: relative;
+        display: inline-block;
+        width: calc(100%/3);
+    }
+
+    .dropup-content {
+        display: none;
+        position: absolute;
+        background-color: rgb(65, 105, 225);
+        background-color: rgba(65, 105, 225,0.8);
+        width: 100%;
+        bottom: 0px;
+        z-index: 1;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #8499d6;
+        width: 100%;
+        margin-left: 0%;
+        z-index: 1;
+        text-align: center;
+    }
+    .dropdown-content a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        display: block;
+        padding: 1px 1px;
+        margin-left: 0%;
+        text-align: left;
+    }
+
+    .dropdown-content a:hover {background-color: #4169e1}
+    .dropup:hover .dropup-content {
+        display: block;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .search{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-radius: 28px;
+        background-color: #f2f2f2;
+        transition: box-shadow 0.25s;
+        margin: auto;
+        margin-top: 10px;
+    }
+    .search:focus-within {
+        box-shadow: 0 0 2px #333333;
+    }
+    .search_input{
+        font-size: 16px;
+        font-family: calibri;
+        color: #333333;
+        margin-left: 10px;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        width: 	100%;
+    }
+    p.solid{
+        border-style: solid;
+        border-color: #ffffff; 
+        text-decoration: none;
+        margin: auto;
+        margin-bottom: 10%;
+        padding: 2px;    
+    }
+    p.solid:hover {background-color: #f3f3f3;}
+    a {
+        text-decoration: none;
+    }
+    .wrapper{
+        padding-left: 10%;
+        padding-right: 10%;
+        position: relative;
+    }
+    .wrapper1{
+        padding-left: 10%;
+        padding-right: 10%;
+        position: relative;
+    }
+    .wrapper .carousel{
+        cursor: pointer;
+        overflow: hidden;
+        white-space: nowrap;
+        scroll-behavior: smooth;
+    }
+    .carousel .dropup{
+        height: 430px;
+        object-fit: cover;
+        width: calc(99%/3);
+    }
+    .carousel .dropup:first-child{
+        margin-left: 0px;
+    }
+    .wrapper1 .carousel1{
+        cursor: pointer;
+        overflow: hidden;
+        white-space: nowrap;
+        scroll-behavior: smooth;
+    }
+    .carousel1 img{
+        object-fit: cover;
+        width: calc(99%/3);
+    }
+    .carousel1 img:first-child{
+        margin-left: 0px;
+    }
+    .wrapper i{
+        top: 50%;
+        height: 50px;
+        width: 50px;
+        background:#4169e1;
+        cursor: pointer;
+        position: absolute;
+        font-size: 2.5rem;
+        color: #ffffff;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 50%;
+        transform: translateY(-50%);
+    }
+    .wrapper i:first-child{
+        left: 5%;
+        display: none;
+    }
+    .wrapper i:last-child{
+        right: 5%;
+    }
+    @media screen and (max-width: 900px) {
+        .carousel .dropup{
+            width: calc(100%/2);
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        .carousel .dropup{
+            width: calc(100%);
+        }
+    }
+    .wrapper1 i{
+        top: 50%;
+        height: 50px;
+        width: 50px;
+        background:#4169e1;
+        cursor: pointer;
+        position: absolute;
+        font-size: 2.5rem;
+        color: #ffffff;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 50%;
+        transform: translateY(-50%);
+    }
+    .wrapper1 i:first-child{
+        left: 5%;
+        display: none;
+    }
+    .wrapper1 i:last-child{
+        right: 5%;
+    }
+    @media screen and (max-width: 900px) {
+        .carousel img{
+            width: calc(100%/2);
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        .carousel img{
+            width: calc(100%);
+        }
+    }
+    .title_lines {
+        font-size: 300%;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        text-align: center;
+        font-family: Allerta Stencil;
+        z-index: -1;
+    }
+    .title_lines:before, .title_lines:after {
+        position: absolute;
+        top: 51%;
+        overflow: hidden;
+        width: 48%;
+        height: 2px;
+        content: '\a0';
+        background-color: #000000;
+        margin-left: 2%;
+    }
+    .title_lines:before {
+        margin-left: -50%;
+        text-align: right;
+    }
+    div.container2 ul li {
+    background-color: #ccc;
+}
+div.background {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE6x8DHJq4r4CfeZ7yKBE1AJEvas3iT7dpTv_Qrea47j5tCrJ5vOkE8qAOBJNnYabNbtI&usqp=CAU");
+    background-size: 50%;
+}
+div.tieude {
+    text-align: center;
+}
+.tieude h1 {
+    color: #3463f1;
+}
+  
+.containernd {
+  display: flex;
+  width: 40%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 28px;
+    background-color: #fff;
+    transition: box-shadow 0.25s;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.left, .right {
+  flex: 1;
+}
+
+.center {
+  flex: 2;
+}
+</style>
+<script src="script.js" defer></script>
+</head>
+<body> 
+    <header>
+        <div class="split2" style="background-color: #4169e1;">
+            <div>
+                <a href="Vephim.html">
+                    <img id="logo" src="img/Logo1.png" alt="logo" width=25% height=55%>
+                </a>
+            </div>
+            <div class="account">
+                    <img src="img/Account.png" alt="Account" width=10%>
+                    <span style="color: #ffffff;"><a href="Login.html">Đăng Nhập</a>/<a href="Register.html">Đăng Ký</a></span>
+            </div>
+        </div>
+        <div class="split3" style="background-color: #4169e1;">
+            <div class="dropdown" style="text-align: center;">
+                <img src="img/Phim.png" alt="Phim" width=25%>
+                <div class="dropdown-content">
+                    <a href="#">
+                        <p style="font-family: calibri;">Phim Đang Chiếu</p>
+                    </a>
+                    <a href="#">
+                        <p style="font-family: calibri;">Phim Sắp Chiếu</p>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <a href="#" style="text-align: center;">
+                    <img src="img/Ve.png" alt="Vé" width="25%">
+                </a>
+            </div>
+            <div class="dropdown" style="text-align: center;">
+                <img src="img/TV.png" alt="Thành Viên" width=40%>
+                <div class="dropdown-content">
+                    <a href="#">
+                        <p style="font-family: calibri;">Tài Khoản UITcinema</p>
+                    </a>
+                    <a href="#">
+                        <p style="font-family: calibri;">Quyền Lợi</p>
+                    </a>
+                </div>
+            </div>
+            <div class="dropdown" style="text-align: center;">
+                <img src="img/CP.png" alt="Cultureplex" width=40%>
+                <div class="dropdown-content">
+                    <a href="Voucherphim.html">
+                        <p style="font-family: calibri;">Voucher Phim</p>
+                    </a>
+                    <a href="Thuerap.html">
+                        <p style="font-family: calibri;">Thuê Rạp & Vé Nhóm</p>
+                    </a>
+                    <a href="E-UITcinema.html">
+                        <p style="font-family: calibri;">E-UITcinema</p>
+                    </a>
+                    <a href="#">
+                        <p style="font-family: calibri;">UITcinema EGift</p>
+                    </a>
+                    <a href="#">
+                        <p style="font-family: calibri;">Uitcinema Rules</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <form>
+        <div class="search">
+            <i class="fa fa-search"></i>
+            <input class="search_input" type="search" placeholder="Phim cần tìm ...">
+        </div>
+    </form>
+    <div class="title_lines"><b>MOVIE</b></div>
+    <main>
+        <div class="background">
+        <div class="container2">
+          <ul style="display: flex; list-style: none; margin: 0; padding: 0; justify-content: space-around;">
+            <li><h3><a href="#chuongtrinhdiemthuong.html">CHƯƠNG TRÌNH ĐIỂM THƯỞNG</a></h3></li>
+            <li><h3><a href="#quatangsinhnhat.html">QUÀ TẶNG SINH NHẬT</a></h3></li>
+            <li><h3><a href="#capdothanhvien.html">CẤP ĐỘ THÀNH VIÊN</a></h3></li>
+            <li><h3><a href="#quanlytaikhoan.html">QUẢN LÝ TÀI KHOẢN</a></h3></li>
+            <li><h3><a href="#bancanhotro.html">BẠN CẦN HỖ TRỢ</a></h3></li>
+          </ul>
+        </div>
+        <div class="chuongtrinhdiemthuong">
+          <div class="tieude">
+                <a><h1>CHƯƠNG TRÌNH ĐIỂM THƯỞNG</h1></a>
+            </div>
+            <div class="containernd">
+              <div class="left"></div>
+              <div class="center">
+                <div class="noidung">
+    
+    <p>Chương trình bao gồm 4 đối tượng thành viên U22 | UIT Member | UIT VIP và UIT VVIP, với những quyền lợi và mức ưu đãi khác nhau. Mỗi khi thực hiện giao dịch tại hệ thống rạp UIT, bạn sẽ nhận được một số điểm thưởng tương ứng với cấp độ thành viên:</p>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Cấp độ</th>
+          <th>Tại Quầy Vé</th>
+          <th>Ví dụ</th>
+          <th>Quầy Bắp Nước</th>
+          <th>Ví dụ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>U22</td>
+          <td>5%</td>
+          <td>100.000 VND = 5 Điểm</td>
+          <td>3%</td>
+          <td>100.000 VND = 3 Điểm</td>
+        </tr>
+        <tr>
+          <td>Member</td>
+          <td>7%</td>
+          <td>100.000 VND = 7 Điểm</td>
+          <td>4%</td>
+          <td>100.000 VND = 4 Điểm</td>
+        </tr>
+        <tr>
+          <td>VIP</td>
+          <td>10%</td>
+          <td>100.000 VND = 10 Điểm</td>
+          <td>5%</td>
+          <td>100.000 VND = 5 Điểm</td>
+        </tr>
+        <tr>
+          <td>VVIP</td>
+          <td>12%</td>
+          <td>100.000 VND = 12 Điểm</td>
+          <td>6%</td>
+          <td>100.000 VND = 6 Điểm</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <p>1 điểm = 1.000 VND, có giá trị như tiền mặt, được dùng để mua vé xem phim, thức uống/ combo tương ứng tại UIT và đổi voucher ưu đãi trên UIT Reward. Ví dụ: Với giao dịch mua vé giá 100.000 VND bạn có thể:</p>
+    
+    <ul>
+      <li>Thanh toán 80.000 VND + 20 điểm thưởng</li>
+      <li>Thanh toán với 10.000 VND + 90 điểm thưởng</li>
+    </ul>
+    
+    <h3>Cách làm tròn điểm thưởng:</h3>
+    
+    <ul>
+      <li>Từ 0.1 đến 0.4: làm tròn xuống (Ví dụ: 3.2 điểm sẽ được tích vào tài khoản 3 điểm)</li>
+      <li>Từ 0.5 đến 0.9: làm tròn lên (Ví dụ: 3.6 điểm sẽ được tích vào tài khoản 4 điểm)</li>
+    </ul>
+    
+    <h3>Lưu ý:</h3>
+    
+    <ol>
+      <li>Điểm thưởng có thời hạn sử dụng là 01 năm. Ví dụ: Điểm của bạn được nhận vào 08:00 ngày 05/01/2024 sẽ hết hạn sử dụng vào lúc 07:59:59 ngày 05/01/2025.</li>
+      <li>Điểm thưởng có giá trị sử dụng tại tất cả các rạp UIT trên toàn quốc.</li>
+      <li>Sau khi dịch vụ được UIT Việt Nam hoàn thành, điểm thưởng sẽ được ghi nhận vào tài khoản của bạn vào 8:00 sáng ngày tiếp theo. Ví dụ: suất chiếu của bạn diễn ra vào ngày 05/01/2024, điểm thưởng sẽ được ghi nhận vào tài khoản của bạn vào 8:00 sáng ngày 06/01/2024.</li>
+      <li>KHÔNG tích lũy chi tiêu/điểm thưởng đối với các giao dịch đã áp dụng các chương trình giảm giá/khuyến mãi do UIT và đối tác tổ chức.</li>
+      <li>KHÔNG tích lũy chi tiêu/điểm thưởng đối với các giao dịch:</li>
+        <ul>
+          <li>Mua/sử dụng voucher</li>
+          <li>Mua thẻ quà tặng và eGift</li>
+          <li>Mua vé/ F&B bằng thẻ UITian, thẻ CJ membership và thẻ Premium</li>
+          <li>Giao dịch có hình thức thanh toán 100% bằng điểm thưởng.</li>
+        </ul>
+      <li>Thành viên được tích lũy điểm/chi tiêu cho tối đa 10 giao dịch/ngày.</li>
+      <li>Bạn có thể dễ dàng kiểm tra điểm thưởng của mình trên UIT Website  hoặc Ứng dụng UIT trên điện thoại (Mobile App)</li>
+      <li>  Điểm thưởng tối thiểu được sử dụng cho mỗi giao dịch là 20 điểm trở lên.</li>
+      <li> Thành viên khi thanh toán trực tuyến trên Website/APP, trong 1 giao dịch, điểm thưởng chỉ được sử dụng thanh toán tối đa 90% giá trị đơn hàng.</li>
+      <li> Khi thực hiện các giao dịch sử dụng điểm thưởng hoặc vé miễn phí trực tiếp tại rạp, khách hàng vui lòng xuất trình tài khoản thành viên (Thẻ cứng hoặc tài khoản online trên Ứng dụng UIT) và Giấy tờ tùy thân hoặc giấy tờ khác có thể hiện ngày tháng năm sinh (Bản gốc hoặc ảnh chụp) cho nhân viên rạp để tiến hành xác thực chính chủ tài khoản thành viên. Nhân viên rạp có quyền từ chối yêu cầu của khách hàng nếu khách hàng không cung cấp được tài khoản thành viên và/hoặc giấy tờ quy định tại đây hoặc các thông tin Khách Hàng cung cấp không trùng khớp với nhau. Việc thực hiện các giao dịch sử dụng điểm thưởng hoặc vé miễn phí trên website của UIT và/hoặc ứng dụng UIT trên điện thoại luôn được mặc định là được sử dụng bởi chính chủ tài khoản thành viên. Khách Hàng có nghĩa vụ bảo mật tài khoản Thành Viên của mình. UIT Việt Nam sẽ không giải quyết bất kỳ khiếu nại nào liên quan đến điểm thưởng nếu giao dịch sử dụng điểm thưởng đó được thực hiện trực tuyến.
+        UIT Việt Nam sẽ không hoàn và/hoặc giải quyết đối với điểm thưởng đã được sử dụng nếu Khách Hàng không chứng minh được Khách Hàng không phải là người sử dụng điểm thưởng và quyết định của UIT Việt Nam là quyết định cuối cùng.
+        </li>
+      <li>Khi mua vé online và thanh toán bằng các hình thức điểm, coupon, voucher, thẻ Premium card, CJ member, thẻ quà tặng, hệ thống sẽ yêu cầu bạn nhập mật mã thanh toán (gồm 06 chữ số, thông tin chi tiết vui lòng truy cập TẠI ĐÂY ).</li>
+                </div>
+              </div>
+              <div class="right"></div>
+            </div>        
+        </div>
+        </div>
+    </main>
+    <div class="split3" style="background-color: #4169e1;">
+        <div>
+            <h3 style="margin-bottom: -4%;"><p><b>UIT Cinema</b></p></h3>
+            <p><a href="#">Giới Thiệu</a><br/>
+            <a href="#">Tiện Ích Online</a><br/>
+            <a href="#">Thẻ Quà Tặng</a><br/>
+            <a href="#">Tuyển Dụng</a><br/>
+            <a href="#">Liên Hệ Quảng Cáo UITcinema</a><br/>
+            <a href="#">Dành Cho Đối Tác</a>
+            </p>
+        </div>
+        <div>
+            <h3 style="margin-bottom: -4%;"><p><b>Điều Khoản Sử Dụng</b></p></h3>
+            <p><a href="#">Điều Khoản Chung</a><br/>
+            <a href="#">Điều Khoản Giao Dịch</a><br/>
+            <a href="#">Chính Sách Thanh Toán</a><br/>
+            <a href="#">Chính Sách Bảo Mật</a><br/>
+            <a href="#">Câu Hỏi Thường gặp</a>
+            </p>
+        </div>
+        <div>
+            <h3 style="margin-bottom: -4%;"><p><b>Kết Nối Với Chúng Tôi</b></p></h3>
+            <div class="split3">
+                <div>
+                    <a href="#">
+                        <img id="lh" src="img/Facebook.png" alt="Facebook" width="80%" height="80%">
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <img id="lh" src="img/Youtube.jpg" alt="Youtube" width="80%" height="80%">
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <img id="lh" src="img/Twitter.png" alt="Twitter" width="80%">
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <img id="lh" src="img/Zalo.jpg" alt="Zalo" width="80%">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div>
+        </div>
+            <h3><p><b>Chăm Sóc Khách Hàng</b></p></h3>
+            <p>Hotline: 1900 2213<br/>
+            Giờ Làm Việc: 7:30 - 23:00<br/>
+            Email Hỗ Trợ: hoidap@uitcinema.vn</p>
+        </div>
+    </div>
+</body>
