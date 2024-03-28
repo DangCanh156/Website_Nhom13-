@@ -21,7 +21,5 @@
 * **Thanh toán an toàn:** Thanh toán trực tuyến an toàn bằng các phương thức thanh toán phổ biến.
 * **Khuyến mãi hấp dẫn:** Cập nhật các chương trình khuyến mãi, ưu đãi vé xem phim thường xuyên.
 
-## Hãy trải nghiệm website bán vé xem phim của chúng tôi ngay hôm nay để tận hưởng những ưu điểm tuyệt vời!
-
 
 ## Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi!
