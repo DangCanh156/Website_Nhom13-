@@ -2,7 +2,7 @@
 
 ## Chào mừng bạn đến với website bán vé xem phim trực tuyến!
 
-**Website này được xây dựng sử dụng ASP.NET, cung cấp cho bạn trải nghiệm đặt vé xem phim nhanh chóng, tiện lợi và dễ dàng.**
+**Website này được xây dựng sử dụng ASP.NET, cung cấp những trải nghiệm đặt vé xem phim nhanh chóng, tiện lợi và dễ dàng.**
 
 ## Tính năng chính
 
