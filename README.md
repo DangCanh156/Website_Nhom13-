@@ -1,4 +1,4 @@
-# Giới thiệu website bán vé xem phim
+# Website bán vé xem phim
 
 ## Chào mừng bạn đến với website bán vé xem phim trực tuyến!
 
