@@ -12,10 +12,7 @@
 * **Đặt vé:** Chọn chỗ ngồi, thanh toán trực tuyến bằng thẻ ngân hàng hoặc ví điện tử.
 * **Xác nhận vé:** Nhận vé qua email hoặc tải ứng dụng di động của chúng tôi để xem vé trên điện thoại.
 * **Lịch sử đặt vé:** Theo dõi lịch sử đặt vé của bạn, xem lại thông tin vé đã mua.
-<img
-src="https://drive.google.com/file/d/1IbkoGeXHcxtZIAijQNPW3ocTUBKt9Dv3/view?usp=sharing"
-alt="description" width="250"
-/>
+![Sơ Đồ](https://drive.google.com/file/d/1IbkoGeXHcxtZIAijQNPW3ocTUBKt9Dv3/view?usp=drive_link)
 ## Lợi ích
 
 * **Tiết kiệm thời gian:** Đặt vé online nhanh chóng, không cần xếp hàng chờ mua vé.
