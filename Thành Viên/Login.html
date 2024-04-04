@@ -209,19 +209,20 @@
                 <h3 >ĐĂNG KÝ</h3>
             </a>
         </div>
-        <form>
+        <form id="login-form" action="">
             <div class="container">
-                <label for="uname"><b>Email hoặc số điện thoại</b></label>
-                <input type="text" placeholder="Email hoặc số điện thoại" name="uname" required>
+                <label for="uname"><b>Tên Tài Khoản</b></label>
+                <input type="text" placeholder="Tên Tài Khoản" name="uname" id="username" required>
           
                 <label for="psw"><b>Mật Khẩu</b></label>
-                <input type="password" placeholder="Mật khẩu" name="psw" required>
+                <input type="password" placeholder="Mật khẩu" name="psw" id="password" required>
                   
                 <button type="submit">ĐĂNG NHẬP</button>
                 <a href="ForgetPassword.html">Quên mật khẩu</a>
             </div>
             
         </form>
+        <script src="loginjs.js"></script>
     </div>
     <div class="split3" style="background-color: #4169e1;">
         <div>
