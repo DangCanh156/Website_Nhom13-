@@ -13,7 +13,7 @@
 * **Xác nhận vé:** Nhận vé qua email hoặc tải ứng dụng di động của chúng tôi để xem vé trên điện thoại.
 * **Lịch sử đặt vé:** Theo dõi lịch sử đặt vé của bạn, xem lại thông tin vé đã mua.
 ## Sơ đồ
-![alt](https://drive.google.com/file/d/1IbkoGeXHcxtZIAijQNPW3ocTUBKt9Dv3/view?usp=drive_link)
+![alt text](sodoweb.jpg)
 ## Thành viên thực hiện
 * Võ Đăng Cảnh
 * Trần Trọng Chinh
