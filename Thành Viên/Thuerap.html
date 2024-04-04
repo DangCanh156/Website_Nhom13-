@@ -213,15 +213,15 @@
         <hr style="height:2px;border-width:0;color:gray;background-color:rgb(43, 40, 40);"> 
     <h1 class="form" style= "font-family: Verdana, Arial, sans-serif;text-align: center;">Đăng kí ngay</h1><br>
     <div class="form" style="margin-bottom: 10px;">
-        <form>
-            <label for="fname" ><b>Họ và tên :</b></label><br>
-            <input type="text" ><br>
-            <label for="fname" ><b>Số điện thoại :</b></label><br>
-            <input type="text"><br>
-            <label for="fname" ><b>Email :</b></label><br>
-            <input type="text" ><br>
-            <label for="fname" ><b>Địa chỉ :</b></label><br>
-            <input type="text" ><br>
+        <form name="venhom-form" action="" method="post" >
+            <label for="name" ><b>Họ và tên :</b></label><br>
+            <input type="text" name="name"><br>
+            <label for="phone" ><b>Số điện thoại :</b></label><br>
+            <input type="text" name="phone"><br>
+            <label for="email" ><b>Email :</b></label><br>
+            <input type="text" name="email"><br>
+            <label for="diachi" ><b>Địa chỉ :</b></label><br>
+            <input type="text" name="diachi"><br>
             <label for="dichvu"><b>Chọn dịch vụ :</b></label><br>
             <select id="dichvu" name="dichvu">
                 <option value="Group Booking (Xem phim theo nhóm)">Group Booking (Xem phim theo nhóm)</option>
@@ -230,12 +230,12 @@
                 <option value="Ticket Voucher (Mua Voucher xem phim)">Ticket Voucher (Mua Voucher xem phim)</option>
                 <option value="Gift Card (Mua thẻ quà tặng)">Gift Card (Mua thẻ quà tặng)</option>
             </select><br>
-            <label style="font-family: Verdana, Arial, sans-serif; size: 30;" for="Day"><b>Ngày muốn thuê:</b></label><br>
+            <label style="font-family: Verdana, Arial, sans-serif; size: 30;" for="date"><b>Ngày muốn thuê:</b></label><br>
             <input style="font-family: Verdana, Arial, sans-serif; width: 30vh; height: 5vh; border-radius: 0.5em" type="date" id="date" name="date"><br>
             <label for="fname" ><b>Nhập số lượng khách :</b></label><br>
-            <input type="text" ><br>
+            <input type="text" name="number"><br>
             <label for="khuvuc" style="font-family: Verdana, Arial, sans-serif; size: 30;" ><b>Khu vực :</b></label><br>
-            <select id="khuvuc">
+            <select id="khuvuc" name="khuvuc">
                 <option value="0">Chọn khu vực</option>
                                 <option value="1">Hồ Chí Minh</option>
                                 <option value="3">Hà Nội</option>
@@ -270,10 +270,11 @@
                                 <option value="117">Thái Nguyên</option>
                                 <option value="123">Tiền Giang</option>
                             </select><br>
-                            <label for="fname" style="font-family: Verdana, Arial, sans-serif; size: 30;" ><b>Ghi chú :</b></label><br>
-                    <textarea placeholder="Ghi chú" style="font-family: Verdana, Arial, sans-serif; width: 50vh; height: 20vh;border-radius: 0.5em"></textarea><br>
+                            <label for="note" style="font-family: Verdana, Arial, sans-serif; size: 30;" ><b>Ghi chú :</b></label><br>
+                    <textarea placeholder="Ghi chú" name="note" style="font-family: Verdana, Arial, sans-serif; width: 50vh; height: 20vh;border-radius: 0.5em"></textarea><br>
                     <button type="submit" name="submit" style="font-family: Verdana, Arial, sans-serif; width: 15vh; height: 5vh;border-radius: 0.5em;background-color:rgb(252, 14, 14) ;">Submit</button>
         </form>
+        <script src="venhom.js"></script>
     </div>
     <div class="split3" style="background-color: #4169e1;">
         <div>
