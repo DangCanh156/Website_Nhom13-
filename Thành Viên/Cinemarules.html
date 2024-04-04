@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voucher Phim</title>
+    <meta charset="utf-8">
+   
+<style>
+    body {
+    background-image: url('Option.jpg');
+    size: 14px; line-height: 24px; 
+    font-family: Verdana,Arial,sans-serif; 
+    color: #636363;
+        }
+        .split1{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+    .split2{
+        display: grid;
+        grid-template-columns: 80% 20%;
+    }
+    .split2 img#logo{
+        display: flex;
+        padding-top: 2%;
+        margin-left: 49%;
+        margin-right: 30%;
+        text-align: center;
+    }
+    .split3{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .split3 p{
+        font-family: calibri;
+        padding-left: 10%;
+        color: white;
+    }
+    .split3 a{
+        color:#ffffff;
+        display: inline-block;
+    }
+    .split3 img#lh{
+        display: block;
+        text-align: center;
+        box-shadow: 0 0 4px #f1f1f1;
+    }
+    .split3 a :hover img {
+        transform: scale(0.8);
+    }
+    div.center1{
+        display: block;
+        margin-left: 10%;
+        margin-right: auto;
+        margin-top:  10%;
+        margin-bottom: 10%;
+    }
+    .center2{
+        display: block;
+        margin-top:  12%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5%;
+    }
+    .center3 {
+        display: flex;
+        margin-top: 3%;
+        margin-bottom: auto;
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #8499d6;
+        width: 100%;
+        margin-left: 0%;
+        z-index: 1;
+        text-align: center;
+    }
+    .dropdown-content a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        display: block;
+        padding: 1px 1px;
+        margin-left: 0%;
+        text-align: left;
+    }
+
+    .dropdown-content a:hover {background-color: #4169e1}
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .account{
+        text-align: center;
+    }
+    .account img{
+        margin-top: 5%;
+    }
+    .account a{
+        color: #ffffff;
+        font-family: calibri;
+    }
+    a {
+        text-decoration: none;
+    }
+</style>
+</head>
+<body> 
+    <header>
+        <div class="split2" style="background-color: #4169e1;">
+            <div>
+                <a href="Trangchu.html">
+                    <img id="logo" src="img/Logo1.png" alt="logo" width=25% height=55%>
+                </a>
+            </div>
+            <div class="account">
+                    <img src="img/Account.png" alt="Account" width=10%>
+                    <span style="color: #ffffff;"><a href="Login.html">Đăng Nhập</a>/<a href="Register.html">Đăng Ký</a></span>
+            </div>
+        </div>
+        <div class="split3" style="background-color: #4169e1;">
+            <div class="dropdown" style="text-align: center;">
+                <img src="img/Phim.png" alt="Phim" width=25%>
+                <div class="dropdown-content">
+                    <a href="#">
+                        <p style="font-family: calibri;">Phim Đang Chiếu</p>
+                    </a>
+                    <a href="#">
+                        <p style="font-family: calibri;">Phim Sắp Chiếu</p>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <a href="#" style="text-align: center;">
+                    <img src="img/Ve.png" alt="Vé" width="25%">
+                </a>
+            </div>
+            <div class="dropdown" style="text-align: center;">
+                <img src="img/TV.png" alt="Thành Viên" width=40%>
+                <div class="dropdown-content">
+                    <a href="taikhoancanhan.html">
+                        <p style="font-family: calibri;">Tài Khoản UITcinema</p>
+                    </a>
+                    <a href="thanhvien.html">
+                        <p style="font-family: calibri;">Quyền Lợi</p>
+                    </a>
+                </div>
+            </div>
+            <div class="dropdown" style="text-align: center;">
+                <img src="img/CP.png" alt="Cultureplex" width=40%>
+                <div class="dropdown-content">
+                    <a href="#">
+                        <p style="font-family: calibri;">Voucher Phim</p>
+                    </a>
+                    <a href="Thuerap.html">
+                        <p style="font-family: calibri;">Thuê Rạp & Vé Nhóm</p>
+                    </a>
+                    <a href="E-UITcinema.html">
+                        <p style="font-family: calibri;">E-UITcinema</p>
+                    </a>
+                    <a href="#">
+                        <p style="font-family: calibri;">UITcinema EGift</p>
+                    </a>
+                    <a href="#">
+                        <p style="font-family: calibri;">UITcinema Rules</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <p align ="center" style="padding-left: 30px; padding-right: 30px;"><strong>NHỮNG QUY ĐỊNH TẠI RẠP PHIM UIT CINEMA</strong></p>
+    <p style=" text-align: left; padding-left: 30px;"><strong>I. NỘI QUY PHÒNG CHIẾU</strong><br>- Không quay phim, chụp ảnh.<br>- Tắt chuông điện thoại.<br>- Không hút thuốc.<br>- Không gây mất trật tự.<br>- Không nhai kẹo cao su.<br>- Không mang thú cưng vào rạp.<br>- Bảo quản tài sản cá nhân cẩn thận.<br>- Chỉ thức ăn và nước uống mua tại Cụm Rạp Chiếu Phim UIT CINEMA mới được phép mang vào rạp.<br>- Không sử dụng rượu, bia, thức uống có cồn (dù với bất kỳ nồng độ cồn nào), các chất kích thích khác trong khuôn viên Cụm Rạp Chiếu Phim UIT CINEMA.<br>- Từ 22 giờ Cụm Rạp Chiếu Phim UIT CINEMA không phục vụ khách dưới 13 tuổi<br>- Từ 23 giờ Cụm Rạp Chiếu Phim UIT CINEMA không phục vụ khách dưới 16 tuổi.<br>- Ban Quản Lý Cụm Rạp Chiếu Phim UIT CINEMA có quyền từ chối không cho Quý Khách vào Rạp Chiếu Phim nếu vi phạm.<br>- UIT CINEMA có camera an ninh trong các Cụm Rạp Chiếu Phim UIT CINEMA.</p>
+    <p style="padding-left: 30px; padding-right: 30px;"><strong>II.&nbsp;PHÂN LOẠI PHIM THEO ĐỘ TUỔI</strong></p>
+    <p style="padding-left: 30px; padding-right: 30px;"><strong>1. Phân loại Phim</strong></p>
+    <p style="padding-left: 30px; padding-right: 30px;">UIT CINEMA thông báo tiêu chí phân loại phim theo lứa tuổi như sau:</p>
+    <table border="1" cellpadding="0" cellspacing="0" style="margin-right: 15px; margin-left: 15px;">
+        <tbody style="padding-left: 30px; padding-right: 30px;">
+        <tr style="padding-left: 30px; padding-right: 30px;">
+        <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="96">
+        <p style="text-align: center; padding-left: 30px; padding-right: 30px;"><strong>Phân loại *</strong></p>
+        </td>
+        <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="504">
+        <p align="center" style="padding-left: 30px; padding-right: 30px;"><strong>Định nghĩa</strong></p>
+        </td>
+        </tr>
+        <tr style="padding-left: 30px; padding-right: 30px;">
+        <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="96">
+        <p align="center" style="padding-left: 30px; padding-right: 30px;">P</p>
+        </td>
+        <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="504">
+        <p style="text-align: center; padding-left: 30px; padding-right: 30px;">Phim được phép phổ biến đến người xem ở mọi độ tuổi.</p>
+        </td>
+        </tr>
+        <tr style="padding-left: 30px; padding-right: 30px;">
+        <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="96">
+        <p align="center" style="text-align: center; padding-left: 30px; padding-right: 30px;">K</p>
+        </td>
+        <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="504">
+        <p style="text-align: center; padding-left: 30px; padding-right: 30px;">Phim được phổ biến đến người xem dưới 13 tuổi và có người bảo hộ đi kèm.</p>
+        </td>
+        </tr>
+        <tr style="padding-left: 30px; padding-right: 30px;">
+        <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="96">
+        <p align="center" style="text-align: center; padding-left: 30px; padding-right: 30px;">T13</p>
+        </td>
+        <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="504">
+        <p style="text-align: center; padding-left: 30px; padding-right: 30px;">Phim được phổ biến đến người xem từ đủ 13 tuổi trở lên (13+).</p>
+        </td>
+        </tr>
+        <tr style="padding-left: 30px; padding-right: 30px;">
+        <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="96">
+        <p align="center" style="padding-left: 30px; padding-right: 30px;">T16</p>
+        </td>
+        <td style="text-align: center; padding-left: 30px; padding-right: 30px;" valign="top" width="504">
+        <p style="padding-left: 30px; padding-right: 30px;">Phim được phổ biến đến người xem từ đủ 16 tuổi trở lên (16+).</p>
+        </td>
+        </tr>
+        <tr style="padding-left: 30px; padding-right: 30px;">
+        <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="96">
+        <p align="center" style="padding-left: 30px; padding-right: 30px;">T18</p>
+        </td>
+        <td style="text-align: center; padding-left: 30px; padding-right: 30px;" valign="top" width="504">
+        <p style="padding-left: 30px; padding-right: 30px;">Phim được phổ biến đến người xem từ đủ 18 tuổi trở lên (18+).</p>
+        </td>
+        </tr>
+        <tr style="padding-left: 30px; padding-right: 30px;">
+        <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="96">
+        <p align="center" style="padding-left: 30px; padding-right: 30px;">C</p>
+        </td>
+        <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="504">
+        <p style="text-align: center; padding-left: 30px; padding-right: 30px;">Phim không được phép phổ biến.</p>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+
+        <p style="padding-left: 30px; padding-right: 30px;">2. Lưu ý<br>- Quý Khách Hàng xem phim được phân loại T13, T16, T18 vui lòng mang theo giấy tờ tùy thân có ảnh nhận diện và ngày tháng năm sinh để đảm bảo việc tuân thủ theo quy định. UIT CINEMA có quyền yêu cầu khách hàng xuất trình Giấy khai sinh, Căn cước công dân, Thẻ học sinh, thẻ sinh viên, bằng lái xe, hoặc các giấy tờ tùy thân khác để xác định độ tuổi Quý Khách Hàng.<br>- Ban Quản Lý Cụm Rạp Chiếu Phim UIT CINEMA có quyền kiểm tra và từ chối khách hàng nếu không đúng quy định về độ tuổi.<br>3. Chế tài<br>- Phạt tiền từ 60.000.000 đồng đến 80.000.000 đồng đối với hành vi không đảm bảo người xem phim đúng độ tuổi theo phân loại phim.</p>
+        <p style="padding-left: 30px; padding-right: 30px;"><em>&nbsp;</em></p>
+        <p style="padding-left: 30px; padding-right: 30px;"><strong>III. QUY ĐỊNH VỀ KHUNG GIỜ CHIẾU PHIM CHO TRẺ EM</strong><br>1. Quy định về Khung giờ chiếu phim cho trẻ em<br>UIT CINEMA thông báo áp dụng quy định về khung giờ chiếu phim cho trẻ em như sau:<br>(i) Giờ chiếu phim cho trẻ em dưới 13 tuổi tại Cụm Rạp Chiếu Phim UIT CINEMA kết thúc trước 22 giờ.<br>(ii) Giờ chiếu phim cho trẻ em dưới 16 tuổi tại Cụm Rạp Chiếu Phim UIT CINEMA kết thúc trước 23 giờ.</p>
+        <p style="padding-left: 30px; padding-right: 30px;">2. Lưu ý<br>- UIT CINEMA có quyền yêu cầu khách hàng xuất trình Giấy khai sinh, Căn cước công dân, Thẻ học sinh, thẻ sinh viên, bằng lái xe, hoặc các giấy tờ tùy thân khác để xác định độ tuổi Quý Khách Hàng.<br>- Ban Quản Lý Cụm Rạp Chiếu Phim UIT CINEMA có quyền kiểm tra và từ chối khách hàng nếu không đúng quy định về độ tuổi.</p>
+        <p style="padding-left: 30px; padding-right: 30px;">3. Chế tài<br>- Phạt tiền từ 40.000.000 đồng đến 60.000.000 đồng đối với hành vi vi phạm quy định.</p>
+        <div class="split3" style="background-color: #4169e1;">
+            <div>
+                <h3 style="margin-bottom: -4%;"><p><b>UIT Cinema</b></p></h3>
+                <p><a href="#">Giới Thiệu</a><br/>
+                <a href="#">Tiện Ích Online</a><br/>
+                <a href="#">Thẻ Quà Tặng</a><br/>
+                <a href="#">Tuyển Dụng</a><br/>
+                <a href="#">Liên Hệ Quảng Cáo UITcinema</a><br/>
+                <a href="#">Dành Cho Đối Tác</a>
+                </p>
+            </div>
+            <div>
+                <h3 style="margin-bottom: -4%;"><p><b>Điều Khoản Sử Dụng</b></p></h3>
+                <p><a href="#">Điều Khoản Chung</a><br/>
+                <a href="#">Điều Khoản Giao Dịch</a><br/>
+                <a href="#">Chính Sách Thanh Toán</a><br/>
+                <a href="#">Chính Sách Bảo Mật</a><br/>
+                <a href="#">Câu Hỏi Thường gặp</a>
+                </p>
+            </div>
+            <div>
+                <h3 style="margin-bottom: -4%;"><p><b>Kết Nối Với Chúng Tôi</b></p></h3>
+                <div class="split3">
+                    <div>
+                        <a href="#">
+                            <img id="lh" src="img/Facebook.png" alt="Facebook" width="80%" height="80%">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img id="lh" src="img/Youtube.jpg" alt="Youtube" width="80%" height="80%">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img id="lh" src="img/Twitter.png" alt="Twitter" width="80%">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img id="lh" src="img/Zalo.jpg" alt="Zalo" width="80%">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3><p><b>Chăm Sóc Khách Hàng</b></p></h3>
+                <p>Hotline: 1900 2213<br/>
+                Giờ Làm Việc: 7:30 - 23:00<br/>
+                Email Hỗ Trợ: hoidap@uitcinema.vn</p>
+            </div>
+        </div>
+        </body>
+        
