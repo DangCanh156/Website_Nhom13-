@@ -242,14 +242,14 @@
                 <h3 >ĐĂNG KÝ</h3>
             </a>
         </div>
-        <form>
+        <form action="" method="post" name="register-form" >
             <div class="container">
                 <label for="uname"><b>Tên tài khoản<span style="color: red;">*</span></b></label>
                 <input type="text" placeholder="Tên tài khoản" name="uname" required>
                 <label for="email"><b>Email<span style="color: red;">*</span></b></label>
                 <input type="email" placeholder="Email" name="email" required>
                 <label for="phone"><b>Số điện thoại<span style="color: red;">*</span></b></label>
-                <input type="tel" placeholder="Số điện thoại" name="phone" pattern="[0]{1}-[0-9]{9}" required>
+                <input type="tel" placeholder="Số điện thoại" name="phone" pattern="[0]{1}[0-9]{9}" required>
           
                 <label for="psw"><b>Mật Khẩu<span style="color: red;">*</span></b></label>
                 <div class="password">
@@ -262,7 +262,7 @@
                     <i class="far fa-eye" id="togglePassword" style="cursor: pointer;margin: auto;"></i>
                 </div>
                 <label for="days"><b>Ngày Sinh<span style="color: red;">*</span></b></label><br/>
-                <select id="days">
+                <select id="days" name="days">
                     <option value="ngày">Ngày</option>
                     <option value="01">01</option>
                     <option value="02">02</option>
@@ -296,7 +296,7 @@
                     <option value="30">30</option>
                     <option value="31">31</option>
                 </select>
-                <select id="months">
+                <select id="months" name="months">
                     <option value="tháng">Tháng</option>
                     <option value="01">01</option>
                     <option value="02">02</option>
@@ -311,7 +311,7 @@
                     <option value="11">11</option>
                     <option value="12">12</option>
                 </select>
-                <select id="years">
+                <select id="years" name="years">
                     <option value="năm">Năm</option>
                     <option value="2012">2012</option>
                     <option value="2011">2011</option>
@@ -389,12 +389,12 @@
                 <input type="radio" id="female" name="gender" value="nu">
                 <label for="nu"><b>Nữ</b></label><br/>
                 <label for="address"><b>Quê quán<span style="color: red;">*</span></b></label><br/>
-                <select id="address">
+                <select id="address" name="address">
                     <option value="address">Quê quán</option>
                     <option value="a1">An Giang</option>
                     <option value="a2">Bà Rịa-Vũng Tàu</option>
                     <option value="a3">Bắc Giang</option>
-                    <option value="a4s">Bắc Kạn</option>
+                    <option value="a4">Bắc Kạn</option>
                     <option value="a5">Bạc Liêu</option>
                     <option value="a6">Bắc Ninh</option>
                     <option value="a7">Bến Tre</option>
@@ -461,6 +461,7 @@
             </div>
             
         </form>
+        <script src="registerjs.js"></script>
     </div>
     <div class="split3" style="background-color: #4169e1;">
         <div>
