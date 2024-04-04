@@ -13,6 +13,12 @@
 * **Xác nhận vé:** Nhận vé qua email hoặc tải ứng dụng di động của chúng tôi để xem vé trên điện thoại.
 * **Lịch sử đặt vé:** Theo dõi lịch sử đặt vé của bạn, xem lại thông tin vé đã mua.
 ![Sơ Đồ](https://drive.google.com/file/d/1IbkoGeXHcxtZIAijQNPW3ocTUBKt9Dv3/view?usp=drive_link)
+## Thành viên thực hiện
+* Võ Đăng Cảnh
+* Trần Trọng Chinh
+* Lê Thành Lợi
+* Đào Tiến Hùng
+* Vũ Cảnh Bình Minh
 ## Lợi ích
 
 * **Tiết kiệm thời gian:** Đặt vé online nhanh chóng, không cần xếp hàng chờ mua vé.
