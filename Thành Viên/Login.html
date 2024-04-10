@@ -217,12 +217,27 @@
                 <label for="psw"><b>Mật Khẩu</b></label>
                 <input type="password" placeholder="Mật khẩu" name="psw" id="password" required>
                   
-                <button type="submit">ĐĂNG NHẬP</button>
+                <button type="submit" onclick="submitForm()">ĐĂNG NHẬP</button>
                 <a href="ForgetPassword.html">Quên mật khẩu</a>
             </div>
             
         </form>
-        <script src="loginjs.js"></script>
+        <script>
+        function submitForm() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        
+        google.script.run.withSuccessHandler(loginSuccess).login(username, password);
+    }
+
+    function loginSuccess(isLoggedIn) {
+        if (isLoggedIn) {
+            alert("Login successful!");
+        } else {
+            alert("Invalid username or password!");
+        }
+    }
+</script>
     </div>
     <div class="split3" style="background-color: #4169e1;">
         <div>
