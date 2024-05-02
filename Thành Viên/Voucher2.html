@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thuê rạp & Vé Nhóm</title>
+    <meta charset="utf-8">
+   
+<style>
+    .split1{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .split2{
+        display: grid;
+        grid-template-columns: 80% 20%;
+    }
+    .split2 img#logo{
+        display: flex;
+        padding-top: 2%;
+        margin-left: 49%;
+        margin-right: 30%;
+        text-align: center;
+    }
+    .split3{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .split3 p{
+        font-family: calibri;
+        padding-left: 10%;
+        color: white;
+    }
+    .split3 a{
+        color:#ffffff;
+        display: inline-block;
+    }
+    .split3 img#lh{
+        display: block;
+        text-align: center;
+        box-shadow: 0 0 4px #f1f1f1;
+    }
+    .split3 a :hover img {
+        transform: scale(0.8);
+    }
+    div.center1{
+        display: block;
+        margin-left: 10%;
+        margin-right: auto;
+        margin-top:  10%;
+        margin-bottom: 10%;
+    }
+    .center2{
+        width: auto;
+    }
+ 
+    .center3 {
+        display: flex;
+        margin-top: 3%;
+        margin-bottom: auto;
+        margin-left: 35%;
+        margin-right: 30%;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #8499d6;
+        width: 100%;
+        margin-left: 0%;
+        z-index: 1;
+        text-align: center;
+    }
+    .dropdown-content a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        display: block;
+        padding: 1px 1px;
+        margin-left: 0%;
+        text-align: left;
+    }
+    .dropdown-content a:hover {background-color: #4169e1}
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    a {
+        text-decoration: none;
+    }
+    .account{
+        text-align: center;
+    }
+    .account img{
+        margin-top: 5%;
+    }
+    .account a{
+        color: #ffffff;
+        font-family: calibri;
+    }
+    form{
+        font-family:verdana,arial,sans-serif;
+    }
+    input{
+        width: 100%;
+        padding: 6px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 0.5em;
+    }
+    select{
+        width: 100%;
+        padding: 6px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 0.5em;
+    }
+    .form{
+        width: 50%;
+        margin-left: 25%;
+    }
+
+
+</style>
+</head>
+<body> 
+    <header>
+        <div class="split2" style="background-color: #4169e1;">
+            <div>
+                <a href="Trangchu.html">
+                    <img id="logo" src="img/Logo1.png" alt="logo" width=25% height=55%>
+                </a>
+            </div>
+            <div class="account">
+                    <img src="img/Account.png" alt="Account" width=10%>
+                    <span style="color: #ffffff;"><a href="Login.html">Đăng Nhập</a>/<a href="Register.html">Đăng Ký</a></span>
+            </div>
+        </div>
+        <div class="split3" style="background-color: #4169e1;">
+            <div class="dropdown" style="text-align: center;">
+                <img src="img/Phim.png" alt="Phim" width=25%>
+                <div class="dropdown-content">
+                    <a href="#">
+                        <p style="font-family: calibri;">Phim Đang Chiếu</p>
+                    </a>
+                    <a href="#">
+                        <p style="font-family: calibri;">Phim Sắp Chiếu</p>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <a href="#" style="text-align: center;">
+                    <img src="img/Ve.png" alt="Vé" width="25%">
+                </a>
+            </div>
+            <div class="dropdown" style="text-align: center;">
+                <img src="img/TV.png" alt="Thành Viên" width=40%>
+                <div class="dropdown-content">
+                    <a href="taikhoancanhan.html">
+                        <p style="font-family: calibri;">Tài Khoản UITcinema</p>
+                    </a>
+                    <a href="thanhvien.html">
+                        <p style="font-family: calibri;">Quyền Lợi</p>
+                    </a>
+                </div>
+            </div>
+            <div class="dropdown" style="text-align: center;">
+                <img src="img/CP.png" alt="Cultureplex" width=40%>
+                <div class="dropdown-content">
+                    <a href="Voucherphim.html">
+                        <p style="font-family: calibri;">Voucher Phim</p>
+                    </a>
+                    <a href="Thuerap.html">
+                        <p style="font-family: calibri;">Thuê Rạp & Vé Nhóm</p>
+                    </a>
+                    <a href="E-UITcinema.html">
+                        <p style="font-family: calibri;">E-UITcinema</p>
+                    </a>
+                    <a href="#">
+                        <p style="font-family: calibri;">UITcinema EGift</p>
+                    </a>
+                    <a href="Cinemarules.html">
+                        <p style="font-family: calibri;">UITcinema Rules</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <h2 style="font-family:verdana;">Voucher Phim</h2>
+    <hr style="height:2px;border-width:0;color:gray;background-color:rgb(43, 40, 40);"> 
+    <div class="split1">
+        <div style="text-align: center;">
+            <img class="center2" src="img\voucher2.jpg" alt="Voucher" width=auto height=15%>
+        </div> 
+        <form>
+        <div class=>
+            <h2 style="color: #222;"> Voucher Couple</h2>
+            <b><span style="text-align: left; line-height: 1.5;">Giá:</span></b> <span style="text-align: right;">140.000,00đ</span><br>
+            <b><span style="text-align: left; line-height: 1.5;">Hạn sử dụng:</span></b> <span style="text-align: right;">6 tháng</span><br>
+            <b><span style="text-align: left; line-height: 1.5;">Nơi sử dụng:</span></b> <span style="text-align: right;">tất cả các rạp UIT Cinema</span><br>
+            <b><span style="text-align: left; line-height: 1.5;">Chi tiết:</span></b> <span style="text-align: right;line-height: 1.5;">1 voucher có giá trị tương đương 1 vé, không phụ thu hay hoàn trả giá trị chênh lệch. Áp dụng vào tất cả các ngày trong tuần.</span><br>
+        </div>
+        </form>
+    </div>
+    
+    <hr class="border">
+    <div class="split3" style="background-color: #4169e1;">
+        <div>
+            <h3 style="margin-bottom: -4%;"><p><b>UIT Cinema</b></p></h3>
+            <p><a href="#">Giới Thiệu</a><br/>
+            <a href="#">Tiện Ích Online</a><br/>
+            <a href="#">Thẻ Quà Tặng</a><br/>
+            <a href="#">Tuyển Dụng</a><br/>
+            <a href="#">Liên Hệ Quảng Cáo UITcinema</a><br/>
+            <a href="#">Dành Cho Đối Tác</a>
+            </p>
+        </div>
+        <div>
+            <h3 style="margin-bottom: -4%;"><p><b>Điều Khoản Sử Dụng</b></p></h3>
+            <p><a href="#">Điều Khoản Chung</a><br/>
+            <a href="#">Điều Khoản Giao Dịch</a><br/>
+            <a href="#">Chính Sách Thanh Toán</a><br/>
+            <a href="#">Chính Sách Bảo Mật</a><br/>
+            <a href="#">Câu Hỏi Thường gặp</a>
+            </p>
+        </div>
+        <div>
+            <h3 style="margin-bottom: -4%;"><p><b>Kết Nối Với Chúng Tôi</b></p></h3>
+            <div class="split3">
+                <div>
+                    <a href="#">
+                        <img id="lh" src="img/Facebook.png" alt="Facebook" width="80%" height="80%">
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <img id="lh" src="img/Youtube.jpg" alt="Youtube" width="80%" height="80%">
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <img id="lh" src="img/Twitter.png" alt="Twitter" width="80%">
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <img id="lh" src="img/Zalo.jpg" alt="Zalo" width="80%">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h3><p><b>Chăm Sóc Khách Hàng</b></p></h3>
+            <p>Hotline: 1900 2213<br/>
+            Giờ Làm Việc: 7:30 - 23:00<br/>
+            Email Hỗ Trợ: hoidap@uitcinema.vn</p>
+        </div>
+    </div>
+</body>
